@@ -1,0 +1,80 @@
+double z0[DIM0][1];
+double z1[DIM1][1];
+double z2[DIM2][1];
+
+int input[INPUT_DIM+1];
+
+void getZ0(){
+    int counter = 0;
+
+    for(int i = 0; i < DIM0; i++){
+        z0[i][0] = 0;
+    }
+
+    for(int i = 0; i < DIM0; i++){
+        counter = 0;
+        for(int k = 0; k < INPUT_DIM; k++){
+            z0[i][0] += wT0[i][k]*input[counter];
+            counter++;
+        }
+    }
+    for(int i = 0; i < DIM0; i++){
+        z0[i][0] += b0[i][0];
+        if(z0[i][0] < 0){
+            z0[i][0] = 0;
+        }
+    }
+
+
+}
+
+void getZ1(){
+    int counter = 0;
+
+    for(int i = 0; i < DIM1; i++){
+        z1[i][0] = 0;
+    }
+
+    for(int i = 0; i < DIM1; i++){
+        counter = 0;
+        for(int k = 0; k < DIM0; k++){
+            z1[i][0] += wT1[i][k]*z0[k][0];
+            counter++;
+        }
+    }
+    for(int i = 0; i < DIM1; i++){
+        z1[i][0] += b1[i][0];
+        if(z1[i][0] < 0){
+            z1[i][0] = 0;
+        }
+    }
+}
+
+void getZ2(){
+    int counter = 0;
+
+    for(int i = 0; i < DIM2; i++){
+        z2[i][0] = 0;
+    }
+
+    for(int i = 0; i < DIM2; i++){
+        counter = 0;
+        for(int k = 0; k < DIM1; k++){
+            z2[i][0] += wT2[i][k]*z1[k][0];
+            counter++;
+        }
+    }
+    for(int i = 0; i < DIM2; i++){
+        z2[i][0] += b2[i][0];
+    }
+}
+
+char hypo(){
+    getZ0();
+    getZ1();
+    getZ2();
+    if(z2[0][0] > 0){
+        return 's';
+    }
+    return 'h';
+}
