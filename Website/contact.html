@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E4RS</title>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+
+
+
+<div id="topbar">
+    <div id="toplogo">
+        <div id="toplogop">
+            <a id="logoa" href="index.html">
+                <img id="logopic" src="assets/images/E4RS.png">
+                <p id="name">E4RS</p>
+            </a>
+        </div>
+   </div>
+
+   <div id="data">
+       <div id="topdetails">
+           <div id="topdetailsp">
+               <a id="detailsa" href="details.html">
+                   <p>Details</p>
+               </a>
+           </div>
+      </div>
+
+      <div id="topcontact">
+         <div id="topcontactp">
+             <a id="contacta" href="contact.html">
+                 <p>Contact</p>
+             </a>
+            </div>
+        </div>
+    </div>
+    <div id="dropdown">
+        <div id="dropdown1">
+          <button onclick="myFunction()" id="dropbtn">
+            <div id="div0"></div>
+            <div id="div1"></div>
+            <div id="div2"></div>
+        </button>
+          <div id="dropdown-content">
+            <a href="html.html">Home</a>
+            <a href="details.html">Details</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="info">
+  <form method="post" action="assets/php/contact.php">
+      <!-- <div id="sname">
+        Name<br>
+      </div> -->
+      <input id="tname" type="text" name="name" placeholder="Name">
+      <input id="temail" type="text" name="email" placeholder="Email">
+      <textarea id="tarea" name="multi" rows='5' placeholder="Comments"></textarea>
+      <input id="tsubmit" type="submit" value="submit" name="submit" rows="5">
+      
+  </form>
+</div>
+
+
+
+</body>
+</html>
+

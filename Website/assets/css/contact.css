@@ -1,0 +1,84 @@
+#info{
+  position:relative;
+  top:200px;
+  left:50px;
+  width:90%;
+  max-width:800px;
+  position:relative;
+  margin:auto;
+  font-family:helvetica;
+}
+
+#tname{
+  background: rgba(40, 40, 40, 0.8);
+  border:none;
+  color:#fff;
+  width:80%;
+  font-size:24px;
+  padding:10px 10px 10px 10px;
+  font-family:helvetica;
+  border-radius: 10px;
+  position:relative;
+}
+
+#temail{
+  background: rgba(40, 40, 40, 0.8);
+  border:none;
+  color:#fff;
+  width:80%;
+  font-size:24px;
+  padding:10px 10px 10px 10px;
+  font-family:helvetica;
+  border-radius: 10px;
+  position:relative;
+  top:40px;
+}
+
+#tcomment{
+  background: rgba(40, 40, 40, 0.8);
+  border:none;
+  color:#fff;
+  width:80%;
+  font-size:24px;
+  padding:10px 10px 10px 10px;
+  font-family:helvetica;
+  border-radius: 10px;
+  position:relative;
+  top: 80px;
+  word-break: break-word;
+}
+
+
+
+#tarea{
+  background: rgba(40, 40, 40, 0.8);
+  border:none;
+  color:#fff;
+  width:80%;
+  font-size:24px;
+  padding:10px 10px 10px 10px;
+  font-family:helvetica;
+  border-radius: 10px;
+  position:relative;
+  top: 80px;
+  resize:none;
+}
+
+#tsubmit{
+  position:relative;
+  top:160px;
+  background: rgba(40, 40, 40, 0.8);
+  border:none;
+  color:#fff;
+  width: 110px;
+  height:60px;
+  border-radius: 10px;
+  font-size:24px;
+  font-family:helvetica;
+  left:-120px;
+}
+
+body{
+  color:#fff;
+  font-size:24;
+}

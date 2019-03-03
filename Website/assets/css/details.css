@@ -1,0 +1,207 @@
+#detpic{
+    width:250px;
+    height:200px;
+    padding-left:15px;
+    position:relative;
+    top:5px;
+}
+
+#detpic0{
+    width:250px;
+    height:200px;
+    padding-right:15px;
+    top:60px;
+    position:relative;
+}
+
+#detpic1{
+    width:250px;
+    height:200px;
+    padding-left:15px;
+    position:relative;
+    top:60px;
+}
+
+#detpic2{
+    width:250px;
+    height:200px;
+    padding-right:15px;
+    top:23px;
+    position:relative;
+}
+
+#over{
+    margin:auto;
+    max-width:700px;
+    width:90%;
+    top:20px;
+    position:relative;
+    /* display:flex; */
+}
+
+#over2{
+    display:flex;
+}
+
+
+#overp{
+    text-align:center;
+    font-size:32px;
+    z-index:10;
+}
+
+#overhr{
+    position:relative;
+    width:50px;
+    top:-20px;
+}
+
+
+#sover1{
+    margin:auto;
+    max-width:700px;
+    width:90%;
+    top:20px;
+    position:relative;
+}
+
+#sover1p{
+    text-align:center;
+    font-size:32px;
+    z-index:10;
+}
+
+#sover1hr{
+    position:relative;
+    width:50px;
+    top:-20px;
+}
+
+#sover12{
+    display:flex;
+    position:relative;
+    top:-20px;
+}
+
+#stage1pic{
+    width:250px;
+    height:250px;
+}
+
+#detailp{
+    position:relative;
+    top:-20px;
+}
+
+
+#sover2{
+    margin:auto;
+    max-width:700px;
+    width:90%;
+    top:20px;
+    position:relative;
+}
+
+#sover2p{
+    text-align:center;
+    font-size:32px;
+    z-index:10;
+}
+
+#sover2hr{
+    position:relative;
+    width:50px;
+    top:-20px;
+}
+
+#sover22{
+    display:flex;
+}
+
+#stage2pic{
+    width:250px;
+    height:250px;
+}
+
+#stage2p{
+    position:relative;
+    top:-20px;
+}
+
+
+#sover3{
+    margin:auto;
+    max-width:700px;
+    width:90%;
+    top:20px;
+    position:relative;
+}
+
+#sover3p{
+    text-align:center;
+    font-size:32px;
+    z-index:10;
+
+}
+
+#sover3hr{
+    position:relative;
+    width:50px;
+    top:-20px;
+}
+
+#sover32{
+    display:flex;
+}
+
+#stage3pic{
+    width:250px;
+    height:250px;
+    padding-bottom:50px;
+}
+
+#stage3p{
+    padding-bottom:80px;
+    position:relative;
+    top:5px;
+}
+
+
+
+
+a{
+    font-family:helvetica;
+    text-decoration:none;
+    color:#fff;
+}
+p{
+    color:#fff;
+    font-family:helvetica;
+    font-size:18px;
+}
+body{
+    background-color:#000;
+    font-family:helvetica;
+    margin:0;
+}
+
+
+@media(min-width:700px){
+
+    #all{
+        width:90%;
+        max-width:800px;
+        position:relative;
+        margin:auto;
+        top:30px;
+        max-height:100px;
+    }
+
+
+}
+
+@media(max-width: 699px){
+
+
+
+}

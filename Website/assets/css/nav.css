@@ -1,0 +1,322 @@
+@media(min-width:505px){
+    #topbar{
+        position:fixed;
+        height:48px;
+        max-height:40px;
+        width:100%;
+        left:0px;
+        top:0px;
+        background: rgba(40, 40, 40, 0.8);
+            background-color: rgba(40, 40, 40, 0.8);
+        z-index:9999;
+        font-size:13px;
+    }
+
+    #topbar a{
+        text-decoration:none;
+    }
+
+    #data{
+        margin:auto;
+        max-width:300px;
+        width:100%;
+        float:right;
+        display:block;
+    }
+
+    #name{
+        position:relative;
+        left:45px;
+        top:-48px;
+    }
+
+    #logoa{
+        position:relative;
+        width:60px;
+        padding:10px;
+    }
+
+    #logopic{
+        height:30px;
+    }
+
+    #toplogo{
+        position:relative;
+        height:40px;
+        left:-10px;
+        width:60px;
+        top:-6px;
+        color:#fff;
+        display:block;
+    }
+    #toplogop{
+        position:relative;
+        top:12px;
+        text-align:center;
+    }
+
+    #toplogo:hover{
+        opacity:0.65;
+        transition-duration:.2s;
+    }
+
+    #detailsa{
+        position:relative;
+        width:60px;
+        padding:10px;
+    }
+
+    #detailspic{
+        height:20px;
+    }
+
+    #topdetails{
+        position:relative;
+        height:40px;
+        margin-left:auto;
+        margin-right:100px;
+        top:-79px;
+        width:60px;
+        color:#fff;
+    }
+    #topdetailsp{
+        position:relative;
+        top:12px;
+        text-align:center;
+        text-decoration:none;
+        color:#fff;
+    }
+
+    #topdetails:hover{
+        opacity:0.65;
+        transition-duration:.2s;
+    }
+
+    #contacta{
+        position:relative;
+        width:60px;
+        padding:10px;
+    }
+
+    #contactpic{
+        height:20px;
+    }
+
+    #topcontact{
+        position:relative;
+        height:40px;
+        margin-left:auto;
+        margin-right:20px;
+        /*align:right;*/
+        top:-119px;
+        width:60px;
+        color:#fff;
+    }
+    #topcontactp{
+        position:relative;
+        top:12px;
+        text-align:center;
+        text-decoration:none;
+        color:#fff;
+    }
+
+    #topcontact:hover{
+        opacity:0.65;
+        transition-duration:.2s;
+    }
+
+    #dropdown{
+        display:none;
+    }
+
+}
+
+
+@media(max-width:504px){
+
+    #data{
+        display:none;
+    }
+
+    #name{
+        position:relative;
+        left:45px;
+        top:-45px;
+    }
+
+    #logoa{
+        position:relative;
+        width:60px;
+        padding:10px;
+        height:45px;
+    }
+
+    #logopic{
+        height:20px;
+    }
+
+    #toplogo{
+        position:relative;
+        height:40px;
+        left:0%;
+        width:60px;
+        color:#fff;
+        display:block;
+    }
+    #toplogop{
+        position:relative;
+        top:12px;
+        text-align:center;
+    }
+
+    #toplogo:hover{
+        opacity:0.65;
+        transition-duration:.2s;
+    }
+
+    #dropdown{
+        background-color:rgba(40, 40, 40, 0);
+        position:fixed;
+        display:block;
+    }
+
+    #topbar{
+        position:fixed;
+        height:48px;
+        max-height:40px;
+        width:100%;
+        left:0px;
+        top:0px;
+        background: rgba(40, 40, 40, 0.8);
+        background-color:rgba(40, 40, 40, 0.8);
+        z-index:9000;
+        font-size:13px;
+    }
+
+    #dropbtn {
+        transition: 0.3s;
+        color: white;
+        padding:8px;
+        font-size:16px;
+        border: none;
+        cursor: crosshair;
+        border-radius: 2px;
+        z-index:90;
+        position:fixed;
+        left:85%;
+        top:0px;
+        background-color:rgba(40, 40, 40, 0);
+
+    }
+
+
+    #dropdown-content {
+        position:fixed;
+        top:40px;
+        width:100%;
+        left:0px;
+        transition: all 0.2s ease-in;
+        overflow:hidden;
+        height:0px;
+        background-color:rgba(40, 40, 40, 0.8);
+    }
+
+    /* Links inside the dropdown */
+    #dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-size:16px;
+    }
+
+    /* Change color of dropdown links on hover */
+    #dropdown-content a:hover {
+        background-color:#fff;
+        color:  #000000;
+
+    }
+
+    /* Show the dropdown menu on hover */
+    #dropdown:hover #dropdown-content {
+        height:133px;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    #dropdown:hover #dropbtn {
+        background-color:#fff;
+        transition: 0.3s;
+    }
+    #dropdown:hover #div0{
+        background-color:#000;
+        transition:0.3s;
+    }
+    #dropdown:hover #div1{
+        background-color:#000;
+        transition:0.3s;
+    }
+    #dropdown:hover #div2{
+        background-color:#000;
+        transition:0.3s;
+    }
+
+
+    #dropdown1 {
+        position: fixed;
+        top: 150px;
+        left: 50px;
+        background-color:rgba(40, 40, 40, 0.8);
+    }
+
+    #dropdown2 {
+        position: fixed;
+        top: 150px;
+        left: 220px;
+        background-color:rgba(40, 40, 40, 0.8);
+    }
+
+    #dropdown3 {
+        position: fixed;
+        top: 150px;
+        left: 615px;
+        background-color:rgba(40, 40, 40, 0.8);
+    }
+
+    #div0{
+        width:35px;
+        height:5px;
+        background-color:#fff;
+        margin:2px;
+    }
+    #div1{
+        width:35px;
+        height:5px;
+        background-color:#fff;
+        margin:2px;
+    }
+    #div2{
+        position:relative;
+        width:35px;
+        height:5px;
+        background-color:#fff;
+        margin:2px;
+        top:-1px;
+    }
+
+
+
+}
+
+a{
+    font-family:helvetica;
+    text-decoration:none;
+    color:#fff;
+}
+p{
+    color:#fff;
+    font-family:helvetica;
+    font-size:18px;
+}
+body{
+    background-color:#000;
+}
