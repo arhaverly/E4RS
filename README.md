@@ -23,8 +23,12 @@ This is the most simple stage, but it is just as important. Sending from the mic
 
 ### Circuit
 
-![Circuit Diagram](https://raw.githubusercontent.com/arhaverly/ThirdEar/master/Documentation/Circuit.png?token=Ad6C0pz6A9lrJocOwmrwEHaiSphd-jqpks5ckaIUwA%3D%3D)
+View the circuit in `Design/Electrical/Circuit.png`
 
 ### Code
 
 For the completed `arduino.cpp` file from the data stored in `data/data.txt`, run `./data_to_arduino.sh`
+
+### Enclosure
+
+To view the enclosure and related items, peruse `Design/Mechanical/`
