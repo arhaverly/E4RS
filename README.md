@@ -1,6 +1,6 @@
 # ThirdEar
 
-Not up yet: Checkout the [website](https://doesnotexist.com)
+Not up yet: Checkout the [website](https://thiswebsitedoesnotexist.com)
 
 ## Overview
 
