@@ -11,7 +11,7 @@ classifier = model_from_json(classifier_json)
 classifier.load_weights("classifier.h5")
 print("Loaded classifier from disk")
 
-dataset = numpy.loadtxt("data/data.txt", delimiter=",")
+dataset = numpy.loadtxt("data/test.txt", delimiter=",")
 
 X = dataset[:,0:435]
 Y = dataset[:,435]
