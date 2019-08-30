@@ -1,0 +1,3 @@
+[submodule "E4RS_website"]
+	path = E4RS_website
+	url = git@github.com:arhaverly/E4RS_website.git
