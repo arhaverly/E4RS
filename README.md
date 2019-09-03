@@ -1,6 +1,6 @@
 # ThirdEar
 
-Not up yet: Checkout the [website](e4rsinnovation.com)
+Not up yet: Checkout the [website](http://e4rsinnovation.com)
 
 ## Overview
 
