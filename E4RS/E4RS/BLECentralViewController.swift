@@ -17,7 +17,6 @@ var blePeripheral : CBPeripheral?
 var characteristicASCIIValue = NSString()
 
 
-
 class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDelegate, UITableViewDataSource{
     
     //Data
@@ -54,14 +53,29 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 //        backButton.tintColor = UIColor.white
         navigationItem.backBarButtonItem = backButton
+        
+        
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         disconnectFromDevice()
         super.viewDidAppear(animated)
         refreshScanView()
         print("View Cleared")
+
+        let defaults = UserDefaults.standard
+        if defaults.string(forKey: "info_read") != "true" {
+            performSegue(withIdentifier: "info_segue", sender: nil)
+        }
+
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false;
+    }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -69,7 +83,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         centralManager?.stopScan()
     }
     
-    /*Okay, now that we have our CBCentalManager up and running, it's time to start searching for devices. You can do this by calling the "scanForPeripherals" method.*/
+    /*Okay, now that we have our CBCentralManager up and running, it's time to start searching for devices. You can do this by calling the "scanForPeripherals" method.*/
     
     func startScan() {
         peripherals = []
@@ -114,6 +128,14 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
      Called when the central manager discovers a peripheral while scanning. Also, once peripheral is connected, cancel scanning.
      */
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral,advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        
+        let defaults = UserDefaults.standard
+        if defaults.string(forKey: "peripheral") != nil{
+            if peripheral.name! == defaults.string(forKey: "peripheral") {
+                blePeripheral = peripheral
+                connectToDevice()
+            }
+        }
         
         if peripheral.name?.prefix(4) == "E4RS"{
             blePeripheral = peripheral
@@ -337,7 +359,13 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         if peripheral.name == nil {
             cell.peripheralLabel.text = "nil"
         } else {
-            cell.peripheralLabel.text = peripheral.name
+            let str = peripheral.name!
+            let start = str.index(str.startIndex, offsetBy: 14)
+            let end = str.index(str.endIndex, offsetBy: -13)
+            let range = start..<end
+            
+            let mySubstring = str[range]
+            cell.peripheralLabel.text = str.prefix(13) + String(mySubstring)
         }
         cell.peripheralLabel.font = UIFont(name:"Helvetica", size:36)
         
@@ -347,6 +375,8 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         blePeripheral = peripherals[indexPath.row]
         connectToDevice()
+
+        UserDefaults.standard.set(blePeripheral!.name!, forKey: "peripheral")
     }
     
     /*
