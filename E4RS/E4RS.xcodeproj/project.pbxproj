@@ -7,8 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5DA160FB231630A700477285 /* circle.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5DA160FA231630A700477285 /* circle.gif */; };
-		5DA160FD231630AF00477285 /* arrow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5DA160FC231630AF00477285 /* arrow.jpg */; };
+		5D365CD823268B370019EE5D /* simple in Resources */ = {isa = PBXBuildFile; fileRef = 5D365CD623268B370019EE5D /* simple */; };
+		5D365CD923268B370019EE5D /* andy in Resources */ = {isa = PBXBuildFile; fileRef = 5D365CD723268B370019EE5D /* andy */; };
+		5D365CDD2326AE6A0019EE5D /* clockWithNumbers in Resources */ = {isa = PBXBuildFile; fileRef = 5D365CDA2326AE6A0019EE5D /* clockWithNumbers */; };
+		5D365CDE2326AE6A0019EE5D /* compassWithDirections in Resources */ = {isa = PBXBuildFile; fileRef = 5D365CDB2326AE6A0019EE5D /* compassWithDirections */; };
+		5D365CDF2326AE6A0019EE5D /* clock in Resources */ = {isa = PBXBuildFile; fileRef = 5D365CDC2326AE6A0019EE5D /* clock */; };
+		5D365CE12326AE820019EE5D /* compass in Resources */ = {isa = PBXBuildFile; fileRef = 5D365CE02326AE820019EE5D /* compass */; };
+		5D365CE52326BB8B0019EE5D /* colors.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D365CE42326BB8B0019EE5D /* colors.png */; };
+		5D365CE7232B01790019EE5D /* weights in Resources */ = {isa = PBXBuildFile; fileRef = 5D365CE6232B01780019EE5D /* weights */; };
+		5D365CE9232C8B350019EE5D /* ascii in Resources */ = {isa = PBXBuildFile; fileRef = 5D365CE8232C8B350019EE5D /* ascii */; };
+		5DAB6FDD2318B5070049BF88 /* point.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DAB6FDC2318B5070049BF88 /* point.png */; };
+		5DC2BC4E232530E200D5EBC5 /* compass02.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DC2BC4C232530E200D5EBC5 /* compass02.png */; };
+		5DC2BC4F232530E200D5EBC5 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DC2BC4D232530E200D5EBC5 /* clock.png */; };
+		5DC2BC512325311B00D5EBC5 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DC2BC502325311B00D5EBC5 /* arrow.png */; };
+		5DD397642325B87200BA9764 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD397632325B87200BA9764 /* SettingsViewController.swift */; };
+		5DD397682325C96100BA9764 /* settings24.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD397672325C96100BA9764 /* settings24.png */; };
+		5DD3976A2325D20D00BA9764 /* info24.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD397692325D20D00BA9764 /* info24.png */; };
+		5DF2BD48231E9F9F00A0C866 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DF2BD47231E9F9F00A0C866 /* info.png */; };
+		5DF2BD52231EAFF000A0C866 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2BD51231EAFF000A0C866 /* TutorialViewController.swift */; };
 		D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657231DF2F4C8002B7557 /* UUIDKey.swift */; };
 		D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657251DF45E04002B7557 /* UartModuleViewController.swift */; };
 		D5B24DDC1DEE393B00D33B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B24DDB1DEE393B00D33B5A /* AppDelegate.swift */; };
@@ -20,10 +36,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5DA160FA231630A700477285 /* circle.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = circle.gif; path = ../../../Desktop/circle.gif; sourceTree = "<group>"; };
-		5DA160FC231630AF00477285 /* arrow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = arrow.jpg; path = ../../../Desktop/arrow.jpg; sourceTree = "<group>"; };
+		5D365CD623268B370019EE5D /* simple */ = {isa = PBXFileReference; lastKnownFileType = file; path = simple; sourceTree = "<group>"; };
+		5D365CD723268B370019EE5D /* andy */ = {isa = PBXFileReference; lastKnownFileType = file; path = andy; sourceTree = "<group>"; };
+		5D365CDA2326AE6A0019EE5D /* clockWithNumbers */ = {isa = PBXFileReference; lastKnownFileType = file; path = clockWithNumbers; sourceTree = "<group>"; };
+		5D365CDB2326AE6A0019EE5D /* compassWithDirections */ = {isa = PBXFileReference; lastKnownFileType = file; path = compassWithDirections; sourceTree = "<group>"; };
+		5D365CDC2326AE6A0019EE5D /* clock */ = {isa = PBXFileReference; lastKnownFileType = file; path = clock; sourceTree = "<group>"; };
+		5D365CE02326AE820019EE5D /* compass */ = {isa = PBXFileReference; lastKnownFileType = file; path = compass; sourceTree = "<group>"; };
+		5D365CE42326BB8B0019EE5D /* colors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colors.png; sourceTree = "<group>"; };
+		5D365CE6232B01780019EE5D /* weights */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = weights; sourceTree = "<group>"; };
+		5D365CE8232C8B350019EE5D /* ascii */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ascii; sourceTree = "<group>"; };
+		5DAB6FDC2318B5070049BF88 /* point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = point.png; sourceTree = "<group>"; };
+		5DC2BC4C232530E200D5EBC5 /* compass02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass02.png; sourceTree = "<group>"; };
+		5DC2BC4D232530E200D5EBC5 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		5DC2BC502325311B00D5EBC5 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		5DD397632325B87200BA9764 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5DD397672325C96100BA9764 /* settings24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings24.png; sourceTree = "<group>"; };
+		5DD397692325D20D00BA9764 /* info24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info24.png; sourceTree = "<group>"; };
+		5DF2BD47231E9F9F00A0C866 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		5DF2BD51231EAFF000A0C866 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		D50657231DF2F4C8002B7557 /* UUIDKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
-		D50657251DF45E04002B7557 /* UartModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UartModuleViewController.swift; sourceTree = "<group>"; };
+		D50657251DF45E04002B7557 /* UartModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UartModuleViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		D5B24DD81DEE393B00D33B5A /* E4RS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = E4RS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B24DDB1DEE393B00D33B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5B24DE01DEE393B00D33B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,12 +98,28 @@
 			children = (
 				D5B24DDB1DEE393B00D33B5A /* AppDelegate.swift */,
 				D5B24DED1DEE399800D33B5A /* BLECentralViewController.swift */,
+				5DAB6FDC2318B5070049BF88 /* point.png */,
+				5D365CD723268B370019EE5D /* andy */,
+				5D365CD623268B370019EE5D /* simple */,
 				D50657251DF45E04002B7557 /* UartModuleViewController.swift */,
+				5D365CE8232C8B350019EE5D /* ascii */,
+				5D365CE6232B01780019EE5D /* weights */,
+				5D365CDC2326AE6A0019EE5D /* clock */,
+				5D365CDA2326AE6A0019EE5D /* clockWithNumbers */,
+				5D365CDB2326AE6A0019EE5D /* compassWithDirections */,
+				5DF2BD51231EAFF000A0C866 /* TutorialViewController.swift */,
+				5DD397632325B87200BA9764 /* SettingsViewController.swift */,
 				D5B24DEF1DEF153A00D33B5A /* PeripheralTableViewCell.swift */,
 				D50657231DF2F4C8002B7557 /* UUIDKey.swift */,
 				D5B24DDF1DEE393B00D33B5A /* Main.storyboard */,
-				5DA160FA231630A700477285 /* circle.gif */,
-				5DA160FC231630AF00477285 /* arrow.jpg */,
+				5D365CE42326BB8B0019EE5D /* colors.png */,
+				5DD397672325C96100BA9764 /* settings24.png */,
+				5DC2BC502325311B00D5EBC5 /* arrow.png */,
+				5DC2BC4D232530E200D5EBC5 /* clock.png */,
+				5DC2BC4C232530E200D5EBC5 /* compass02.png */,
+				5D365CE02326AE820019EE5D /* compass */,
+				5DD397692325D20D00BA9764 /* info24.png */,
+				5DF2BD47231E9F9F00A0C866 /* info.png */,
 				D5B24DE21DEE393B00D33B5A /* Assets.xcassets */,
 				D5B24DE41DEE393B00D33B5A /* LaunchScreen.storyboard */,
 				D5B24DE71DEE393B00D33B5A /* Info.plist */,
@@ -95,7 +143,7 @@
 			dependencies = (
 			);
 			name = E4RS;
-			productName = "E4RS";
+			productName = E4RS;
 			productReference = D5B24DD81DEE393B00D33B5A /* E4RS.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -139,11 +187,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DA160FB231630A700477285 /* circle.gif in Resources */,
+				5D365CE7232B01790019EE5D /* weights in Resources */,
+				5DC2BC4F232530E200D5EBC5 /* clock.png in Resources */,
+				5D365CD823268B370019EE5D /* simple in Resources */,
+				5DD397682325C96100BA9764 /* settings24.png in Resources */,
+				5D365CE52326BB8B0019EE5D /* colors.png in Resources */,
+				5DC2BC4E232530E200D5EBC5 /* compass02.png in Resources */,
+				5D365CDD2326AE6A0019EE5D /* clockWithNumbers in Resources */,
+				5DC2BC512325311B00D5EBC5 /* arrow.png in Resources */,
+				5D365CDF2326AE6A0019EE5D /* clock in Resources */,
+				5D365CE9232C8B350019EE5D /* ascii in Resources */,
+				5DF2BD48231E9F9F00A0C866 /* info.png in Resources */,
 				D5B24DE61DEE393B00D33B5A /* LaunchScreen.storyboard in Resources */,
+				5DAB6FDD2318B5070049BF88 /* point.png in Resources */,
+				5D365CD923268B370019EE5D /* andy in Resources */,
 				D5B24DE31DEE393B00D33B5A /* Assets.xcassets in Resources */,
-				5DA160FD231630AF00477285 /* arrow.jpg in Resources */,
+				5D365CDE2326AE6A0019EE5D /* compassWithDirections in Resources */,
+				5D365CE12326AE820019EE5D /* compass in Resources */,
 				D5B24DE11DEE393B00D33B5A /* Main.storyboard in Resources */,
+				5DD3976A2325D20D00BA9764 /* info24.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,8 +218,10 @@
 			files = (
 				D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */,
 				D5B24DEE1DEE399800D33B5A /* BLECentralViewController.swift in Sources */,
+				5DD397642325B87200BA9764 /* SettingsViewController.swift in Sources */,
 				D5B24DDC1DEE393B00D33B5A /* AppDelegate.swift in Sources */,
 				D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */,
+				5DF2BD52231EAFF000A0C866 /* TutorialViewController.swift in Sources */,
 				D5B24DF11DEF153A00D33B5A /* PeripheralTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,7 +366,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W83Q54G9UA;
-				INFOPLIST_FILE = "E4RS/Info.plist";
+				INFOPLIST_FILE = E4RS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BeatonTech.Basic-Chatj";
@@ -316,7 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W83Q54G9UA;
-				INFOPLIST_FILE = "E4RS/Info.plist";
+				INFOPLIST_FILE = E4RS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "BeatonTech.Basic-Chatj";

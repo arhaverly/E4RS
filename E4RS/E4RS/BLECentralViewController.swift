@@ -15,12 +15,14 @@ var txCharacteristic : CBCharacteristic?
 var rxCharacteristic : CBCharacteristic?
 var blePeripheral : CBPeripheral?
 var characteristicASCIIValue = NSString()
+var cent : CBCentralManager!
+
 
 
 class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDelegate, UITableViewDataSource{
     
     //Data
-    var centralManager : CBCentralManager!
+    
     var RSSIs = [NSNumber]()
     var data = NSMutableData()
     var writeData: String = ""
@@ -28,6 +30,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     var characteristicValue = [CBUUID: NSData]()
     var timer = Timer()
     var characteristics = [String : CBCharacteristic]()
+    var centralManager : CBCentralManager!
     
     //UI
     @IBOutlet weak var baseTableView: UITableView!
@@ -50,8 +53,8 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         /*Our key player in this app will be our CBCentralManager. CBCentralManager objects are used to manage discovered or connected remote peripheral devices (represented by CBPeripheral objects), including scanning for, discovering, and connecting to advertising peripherals.
          */
         centralManager = CBCentralManager(delegate: self, queue: nil)
+        cent = centralManager
         let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-//        backButton.tintColor = UIColor.white
         navigationItem.backBarButtonItem = backButton
         
         
@@ -61,7 +64,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         disconnectFromDevice()
         super.viewDidAppear(animated)
         refreshScanView()
-        print("View Cleared")
+//        print("View Cleared")
 
         let defaults = UserDefaults.standard
         if defaults.string(forKey: "info_read") != "true" {
@@ -79,7 +82,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("Stop Scanning")
+//        print("Stop Scanning")
         centralManager?.stopScan()
     }
     
@@ -87,7 +90,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     
     func startScan() {
         peripherals = []
-        print("Now Scanning...")
+//        print("Now Scanning...")
         self.timer.invalidate()
         centralManager?.scanForPeripherals(withServices: [BLEService_UUID] , options: [CBCentralManagerScanOptionAllowDuplicatesKey:false])
         Timer.scheduledTimer(timeInterval: 17, target: self, selector: #selector(self.cancelScan), userInfo: nil, repeats: false)
@@ -96,8 +99,8 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     /*We also need to stop scanning at some point so we'll also create a function that calls "stopScan"*/
     @objc func cancelScan() {
         self.centralManager?.stopScan()
-        print("Scan Stopped")
-        print("Number of Peripherals Found: \(peripherals.count)")
+//        print("Scan Stopped")
+//        print("Number of Peripherals Found: \(peripherals.count)")
     }
     
     func refreshScanView() {
@@ -144,10 +147,10 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             peripheral.delegate = self
             self.baseTableView.reloadData()
             if blePeripheral == nil {
-                print("Found new pheripheral devices with services")
-                print("Peripheral name: \(String(describing: peripheral.name))")
-                print("**********************************")
-                print ("Advertisement Data : \(advertisementData)")
+//                print("Found new pheripheral devices with services")
+//                print("Peripheral name: \(String(describing: peripheral.name))")
+//                print("**********************************")
+//                print ("Advertisement Data : \(advertisementData)")
             }
         }
     }
@@ -165,13 +168,13 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
      */
     //-Connected
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        print("*****************************")
-        print("Connection complete")
-        print("Peripheral info: \(String(describing: blePeripheral))")
+//        print("*****************************")
+//        print("Connection complete")
+//        print("Peripheral info: \(String(describing: blePeripheral))")
         
         //Stop Scan- We don't need to scan once we've connected to a peripheral. We got what we came for.
         centralManager?.stopScan()
-        print("Scan Stopped")
+//        print("Scan Stopped")
         
         //Erase data that we might have
         data.length = 0
@@ -212,7 +215,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
      This method is invoked when your app calls the discoverServices(_:) method. If the services of the peripheral are successfully discovered, you can access them through the peripheral’s services property. If successful, the error parameter is nil. If unsuccessful, the error parameter returns the cause of the failure.
      */
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
-        print("*******************************************************")
+//        print("*******************************************************")
         
         if ((error) != nil) {
             print("Error discovering services: \(error!.localizedDescription)")
@@ -228,7 +231,8 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             peripheral.discoverCharacteristics(nil, for: service)
             // bleService = service
         }
-        print("Discovered Services: \(services)")
+//        print("Discovered Services: \(services)")
+//        print(peripheral.name!)
     }
     
     /*
@@ -238,7 +242,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         
-        print("*******************************************************")
+//        print("*******************************************************")
         
         if ((error) != nil) {
             print("Error discovering services: \(error!.localizedDescription)")
@@ -249,12 +253,14 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             return
         }
         
-        print("Found \(characteristics.count) characteristics!")
+//        print("Found \(characteristics.count) characteristics!")
         
         for characteristic in characteristics {
             //looks for the right characteristic
+            print(peripheral.name)
+            print(characteristic)
             
-            if characteristic.uuid.isEqual(BLE_Characteristic_uuid_Rx)  {
+            if characteristic.uuid.isEqual(BLE_Characteristic_uuid_Rx){
                 rxCharacteristic = characteristic
                 
                 //Once found, subscribe to the this particular characteristic...
@@ -262,11 +268,14 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
                 // We can return after calling CBPeripheral.setNotifyValue because CBPeripheralDelegate's
                 // didUpdateNotificationStateForCharacteristic method will be called automatically
                 peripheral.readValue(for: characteristic)
-                print("Rx Characteristic: \(characteristic.uuid)")
+//                print("Rx Characteristic: \(characteristic.uuid)")
             }
             if characteristic.uuid.isEqual(BLE_Characteristic_uuid_Tx){
-                txCharacteristic = characteristic
-                print("Tx Characteristic: \(characteristic.uuid)")
+                print(peripheral.name!)
+                if peripheral.name!.prefix(4) == "E4RS"{
+                    txCharacteristic = characteristic
+                    print("Tx Characteristic: \(characteristic.uuid)")
+                }
             }
             peripheral.discoverDescriptors(for: characteristic)
         }
@@ -281,7 +290,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         if characteristic == rxCharacteristic {
             if let ASCIIstring = NSString(data: characteristic.value!, encoding: String.Encoding.utf8.rawValue) {
                 characteristicASCIIValue = ASCIIstring
-                print("Value Recieved: \((characteristicASCIIValue as String))")
+//                print("Value Recieved: \((characteristicASCIIValue as String))")
                 NotificationCenter.default.post(name:NSNotification.Name(rawValue: "Notify"), object: nil)
                 
             }
@@ -290,7 +299,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverDescriptorsFor characteristic: CBCharacteristic, error: Error?) {
-        print("*******************************************************")
+//        print("*******************************************************")
         
         if error != nil {
             print("\(error.debugDescription)")
@@ -300,7 +309,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             
             for x in characteristic.descriptors!{
                 let descript = x as CBDescriptor?
-                print("function name: DidDiscoverDescriptorForChar \(String(describing: descript?.description))")
+//                print("function name: DidDiscoverDescriptorForChar \(String(describing: descript?.description))")
                 print("Rx Value \(String(describing: rxCharacteristic?.value))")
                 print("Tx Value \(String(describing: txCharacteristic?.value))")
             }
@@ -309,17 +318,17 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
-        print("*******************************************************")
+//        print("*******************************************************")
         
         if (error != nil) {
             print("Error changing notification state:\(String(describing: error?.localizedDescription))")
             
         } else {
-            print("Characteristic's value subscribed")
+//            print("Characteristic's value subscribed")
         }
         
         if (characteristic.isNotifying) {
-            print ("Subscribed. Notification has begun for: \(characteristic.uuid)")
+//            print ("Subscribed. Notification has begun for: \(characteristic.uuid)")
         }
     }
     
@@ -335,7 +344,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             print("Error discovering services: error")
             return
         }
-        print("Message sent")
+//        print("Message sent")
     }
     
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor descriptor: CBDescriptor, error: Error?) {
@@ -343,7 +352,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             print("Error discovering services: error")
             return
         }
-        print("Succeeded!")
+//        print("Succeeded!")
     }
     
     //Table View Functions
