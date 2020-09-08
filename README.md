@@ -1,6 +1,5 @@
 # ThirdEar
 
-Checkout the [website](http://e4rsinnovation.com)
 
 ## Overview
 
