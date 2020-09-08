@@ -1,5 +1,6 @@
 # ThirdEar
 
+Checkout the [demo](https://youtu.be/orJ5UbN_sMo)
 
 ## Overview
 
